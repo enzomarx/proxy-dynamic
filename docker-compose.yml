@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  proxy_server:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config.json:/app/config.json
+    depends_on:
+      - web_interface
+
+  web_interface:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - proxy_server
