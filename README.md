@@ -1,6 +1,6 @@
 # Dynamic Proxy with Python
 
-This project implements a dynamic proxy that can handle route requests between different severs and ports. includes a web interface for managing and configuring rules.
+This project implements a dynamic proxy using Python, Docker, and Nginx. The proxy can route requests between different servers and ports. Includes a web interface for managing and configuring rules.
 
 ## Features
 - Dynamic routing of requests
