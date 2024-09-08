@@ -20,3 +20,23 @@ This project implements a dynamic proxy using Python, Docker, and Nginx. The pro
 - Security: Add security settings in Nginx and HTTPS support.
 - Monitoring: Integrate monitoring and alerting tools.
 - Scalability: Configure multiple instances of the 'proxy_server' for increased capacity.
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/usuario/proxy-dinamico.git
+
+2. Navigate to the project directory:
+````
+cd proxy-dinamico
+````
+3.Build and launch containers using Docker Compose:
+````
+docker-compose up --build
+````
+
+## Execution
+Access the web interface in http://127.0.0.1:5000 to manage routing rules.
+
+Nginx will act as a reverse proxy on port 80 and forward the requests to the dynamic proxy on port 8000.
